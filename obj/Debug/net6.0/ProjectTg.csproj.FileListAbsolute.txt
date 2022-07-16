@@ -54,3 +54,5 @@
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ProjectTg.csproj.CopyComplete
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ProjectTg.genruntimeconfig.cache
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ref/ProjectTg.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/bin/Debug/net6.0/Telegram.Bot.dll
