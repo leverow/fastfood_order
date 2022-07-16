@@ -1,16 +1,17 @@
 using Telegram.Bot;
+using Telegram.Bot.Polling;
 
 namespace fastfood_order.Services;
 public class BotBackgroundService : BackgroundService
 {
     private readonly ILogger<BotBackgroundService> _logger;
     private readonly TelegramBotClient _botClient;
-    private readonly BotUpdateHandler _updateHandler;
+    private readonly IUpdateHandler _updateHandler;
 
     public BotBackgroundService(
         ILogger<BotBackgroundService> logger,
         TelegramBotClient botClient,
-        BotUpdateHandler updateHandler)
+        IUpdateHandler updateHandler)
     {
         _logger = logger;
         _botClient = botClient;
@@ -28,6 +29,6 @@ public class BotBackgroundService : BackgroundService
             }, stoppingToken);
 
         var bot = await _botClient.GetMeAsync();
-        _logger.LogInformation($"{bot.Username} ishga tushdi! :)");
+        _logger.LogInformation($"{bot.Username} bot is Started! :)");
     }
 }

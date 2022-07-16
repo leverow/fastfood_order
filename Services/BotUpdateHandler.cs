@@ -16,7 +16,7 @@ public partial class BotUpdateHandler : IUpdateHandler
 
     public Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Bazi xatolar yuz berdi");
+        _logger.LogInformation("Error in the Bot! ;)");
         return Task.CompletedTask;
     }
 
