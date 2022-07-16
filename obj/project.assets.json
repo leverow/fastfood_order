@@ -278,19 +278,19 @@
     ]
   },
   "packageFolders": {
-    "/home/abdulaziz/.nuget/packages/": {}
+    "/home/leverow/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/ProjectTg.csproj",
+      "projectUniqueName": "/home/leverow/developer/fastfood_order/ProjectTg.csproj",
       "projectName": "ProjectTg",
-      "projectPath": "/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/ProjectTg.csproj",
-      "packagesPath": "/home/abdulaziz/.nuget/packages/",
-      "outputPath": "/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/",
+      "projectPath": "/home/leverow/developer/fastfood_order/ProjectTg.csproj",
+      "packagesPath": "/home/leverow/.nuget/packages/",
+      "outputPath": "/home/leverow/developer/fastfood_order/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/abdulaziz/.nuget/NuGet/NuGet.Config"
+        "/home/leverow/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -341,7 +341,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
       }
     }
   }
