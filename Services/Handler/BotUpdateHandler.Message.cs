@@ -39,7 +39,7 @@ public partial class BotUpdateHandler
         var handler = message.Text switch
         {
             "/start" => ChangeLanguage(botClient, message, token),
-            "Uzbek" or "Russian" or "English" => GetNumber(botClient, message, token),
+            "O'zbekcha" or "Русский" or "English" => GetNumber(botClient, message, token),
             _ => Task.CompletedTask
         };
         
