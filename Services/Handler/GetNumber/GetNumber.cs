@@ -1,3 +1,5 @@
+using bot.Constants;
+using bot.Helpers;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
@@ -10,10 +12,6 @@ public partial class BotUpdateHandler
     private static async Task GetNumber(ITelegramBotClient botClient, Message message, CancellationToken token)
     {       
         const string usage = "Iltimos telefon raqamingizni jo'nating";
-
-        await botClient.SendTextMessageAsync(chatId: message.Chat.Id,
-                                                    text: usage,
-                                                    replyMarkup: new ReplyKeyboardRemove());
 
         await botClient.SendTextMessageAsync(chatId: message.Chat.Id,
                                                     text: "Raqamni jo'natish",
