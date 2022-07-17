@@ -118,63 +118,59 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="phone-Number" xml:space="preserve">
-    <value>Telefon raqamingizni jo'nating  👇 </value>
+    <value>Send your phone number  👇 </value>
     <comment/>
   </data>
   <data name="send" xml:space="preserve">
-    <value>Yuborish 📞</value>
+    <value>Send 📞</value>
     <comment/>
   </data>
   <data name="to-order" xml:space="preserve">
-    <value>Buyurtma  berish 🌟</value>
+    <value>To order 🌟</value>
     <comment/>
   </data>
   <data name="settings" xml:space="preserve">
-    <value>Sozlamalar ⚙️</value>
+    <value>Settings ⚙️</value>
     <comment/>
   </data>
   <data name="send-location" xml:space="preserve">
-    <value>Manzilingizni jo'nating 📍</value>
+    <value>Submit your address📍</value>
     <comment/>
   </data>
   <data name="information-fastfood" xml:space="preserve">
-    <value>Fastfoodlar  haqida ma'lumot  🌭</value>
+    <value>Information about fast foods 🌭</value>
     <comment/>
   </data>
   <data name="fastfood-list" xml:space="preserve">
-    <value>Fastfoodlar ro'yxati 🍔</value>
+    <value>List of fast foods 🍔</value>
     <comment/>
   </data>
   <data name="return-menu" xml:space="preserve">
-    <value>Asosiy menyuga qaytish  👈</value>
+    <value>Return to main menu 👈</value>
     <comment/>
   </data>
   <data name="place-order" xml:space="preserve">
-    <value>Buyurtma haqida ma'lumot va narxi 💰</value>
+    <value>Order information and price 💰</value>
     <comment/>
   </data>
   <data name="get-going" xml:space="preserve">
-    <value>Borib olishni tanlash 🚶🏻</value>
+    <value>Choose to pick up 🚶🏻</value>
     <comment/>
   </data>
   <data name="be-delivered" xml:space="preserve">
-    <value>Yetkazib berilshni tanlash 🚚</value>
+    <value>Choose delivery 🚚</value>
     <comment/>
   </data>
   <data name="branch-selection" xml:space="preserve">
-    <value>Qaysi filialdan olishingizni tanlang  🏪 </value>
-    <comment/>
-  </data>
-  <data name="our-information" xml:space="preserve">
-    <value>Biz haqimizda  👥</value>
+    <value>Choose which branch to pick up 🏪 </value>
     <comment/>
   </data>
   <data name="buy" xml:space="preserve">
-    <value>Sotib olish 💲</value>
+    <value>Buy 💵</value>
     <comment/>
   </data>
   <data name="continue-shopping" xml:space="preserve">
-    <value>Xaridni davom ettirish 💵</value>
+    <value>Continue shopping 💲</value>
     <comment/>
   </data>
   <data name="uzbek" xml:space="preserve">
@@ -186,11 +182,15 @@
     <comment/>
   </data>
   <data name="russia" xml:space="preserve">
-    <value>русский 🇷🇺</value>
+    <value>Pусский 🇷🇺</value>
     <comment/>
   </data>
   <data name="choose-language" xml:space="preserve">
-    <value>Tilni tanlash 🇺🇿 🇺🇸 🇷🇺 </value>
+    <value>Select language 🇺🇿 🇺🇸 🇷🇺 </value>
+    <comment/>
+  </data>
+  <data name="our-information" xml:space="preserve">
+    <value>Our-information 👥</value>
     <comment/>
   </data>
 </root>
