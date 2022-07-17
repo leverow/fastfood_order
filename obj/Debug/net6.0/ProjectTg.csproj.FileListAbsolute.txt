@@ -56,3 +56,8 @@
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ref/ProjectTg.dll
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/bin/Debug/net6.0/Newtonsoft.Json.dll
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/bin/Debug/net6.0/Telegram.Bot.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/bin/Debug/net6.0/uz/ProjectTg.resources.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ProjectTg.Resources.BotLocalizer.uz.resources
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ProjectTg.csproj.GenerateResource.cache
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/uz/ProjectTg.resources.cs
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/uz/ProjectTg.resources.dll
