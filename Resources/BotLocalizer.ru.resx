@@ -126,11 +126,63 @@
     <comment/>
   </data>
   <data name="to-order" xml:space="preserve">
-    <value>To order 🌟</value>
+    <value>Заказать 🌟</value>
     <comment/>
   </data>
   <data name="settings" xml:space="preserve">
-    <value>Settings ⚙️</value>
+    <value>настройки ⚙️</value>
+    <comment/>
+  </data>
+  <data name="send-location" xml:space="preserve">
+    <value>отправка адреса</value>
+    <comment/>
+  </data>
+  <data name="information-fastfood" xml:space="preserve">
+    <value>информация о фастфуде</value>
+    <comment/>
+  </data>
+  <data name="fastfood-list" xml:space="preserve">
+    <value>список фастфудов</value>
+    <comment/>
+  </data>
+  <data name="return-menu" xml:space="preserve">
+    <value>Вернуться в Главное меню</value>
+    <comment/>
+  </data>
+  <data name="place-order" xml:space="preserve">
+    <value>Информация о заказе и цена</value>
+    <comment/>
+  </data>
+  <data name="get-going" xml:space="preserve">
+    <value>Выбор, чтобы пойти</value>
+    <comment/>
+  </data>
+  <data name="be-delivered" xml:space="preserve">
+    <value>Выбор поставщика</value>
+    <comment/>
+  </data>
+  <data name="branch-selection" xml:space="preserve">
+    <value>Выберите, из какой ветки вы будете получать</value>
+    <comment/>
+  </data>
+  <data name="buy" xml:space="preserve">
+    <value>купить</value>
+    <comment/>
+  </data>
+  <data name="continue-shopping" xml:space="preserve">
+    <value>продолжить покупку</value>
+    <comment/>
+  </data>
+  <data name="uzbek" xml:space="preserve">
+    <value>O'zbekcha</value>
+    <comment/>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>English</value>
+    <comment/>
+  </data>
+  <data name="russia" xml:space="preserve">
+    <value>русский</value>
     <comment/>
   </data>
 </root>

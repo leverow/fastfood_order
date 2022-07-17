@@ -117,24 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Full-Name" xml:space="preserve">
-    <value>Iltimos to'liq ism familiyangizni kirting  👇 🖊</value>
-    <comment/>
-  </data>
   <data name="phone-Number" xml:space="preserve">
     <value>Telefon raqamingizni jo'nating  👇 </value>
     <comment/>
   </data>
   <data name="send" xml:space="preserve">
-    <value>yuborish 📞</value>
+    <value>Yuborish 📞</value>
     <comment/>
   </data>
   <data name="to-order" xml:space="preserve">
-    <value>To order 🌟</value>
+    <value>Buyurtma  berish🌟</value>
     <comment/>
   </data>
-  <data name="Settings" xml:space="preserve">
-    <value>Settings ⚙️</value>
+  <data name="settings" xml:space="preserve">
+    <value>Sozlamalar ⚙️</value>
+    <comment/>
+  </data>
+  <data name="send-location" xml:space="preserve">
+    <value>Manzilingizni jo'nating</value>
+    <comment/>
+  </data>
+  <data name="information-fastfood" xml:space="preserve">
+    <value>Fastfoodlar  haqida ma'lumot</value>
+    <comment/>
+  </data>
+  <data name="fastfood-list" xml:space="preserve">
+    <value>Fastfoodlar ro'yxati</value>
+    <comment/>
+  </data>
+  <data name="return-menu" xml:space="preserve">
+    <value>Asosiy menyuga qaytish</value>
+    <comment/>
+  </data>
+  <data name="place-order" xml:space="preserve">
+    <value>Buyurtma haqida ma'lumot va narxi </value>
+    <comment/>
+  </data>
+  <data name="get-going" xml:space="preserve">
+    <value>Borib olishni tanlash</value>
+    <comment/>
+  </data>
+  <data name="be-delivered" xml:space="preserve">
+    <value>Yetkazib berilshni tanlash</value>
+    <comment/>
+  </data>
+  <data name="branch-selection" xml:space="preserve">
+    <value>Qaysi filialdan olishingizni tanlang</value>
+    <comment/>
+  </data>
+  <data name="our-information" xml:space="preserve">
+    <value>Biz haqimizda</value>
+    <comment/>
+  </data>
+  <data name="buy" xml:space="preserve">
+    <value>Sotib olish</value>
+    <comment/>
+  </data>
+  <data name="continue-shopping" xml:space="preserve">
+    <value>Xaridni davom ettirish</value>
+    <comment/>
+  </data>
+  <data name="uzbek" xml:space="preserve">
+    <value>O'zbekcha</value>
+    <comment/>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>English</value>
+    <comment/>
+  </data>
+  <data name="russia" xml:space="preserve">
+    <value>русский</value>
+    <comment/>
+  </data>
+  <data name="choose-language" xml:space="preserve">
+    <value>Tilni tanlash</value>
     <comment/>
   </data>
 </root>

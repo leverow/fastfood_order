@@ -133,4 +133,56 @@
     <value>Settings ⚙️</value>
     <comment/>
   </data>
+  <data name="send-location" xml:space="preserve">
+    <value>Submit your address</value>
+    <comment/>
+  </data>
+  <data name="information-fastfood" xml:space="preserve">
+    <value>Information about fast foods</value>
+    <comment/>
+  </data>
+  <data name="fastfood-list" xml:space="preserve">
+    <value>List of fast foods</value>
+    <comment/>
+  </data>
+  <data name="return-menu" xml:space="preserve">
+    <value>Return to main menu</value>
+    <comment/>
+  </data>
+  <data name="place-order" xml:space="preserve">
+    <value>Order information and price</value>
+    <comment/>
+  </data>
+  <data name="get-going" xml:space="preserve">
+    <value>Choose to pick up</value>
+    <comment/>
+  </data>
+  <data name="be-delivered" xml:space="preserve">
+    <value>about us</value>
+    <comment/>
+  </data>
+  <data name="branch-selection" xml:space="preserve">
+    <value>Choose which branch to pick up</value>
+    <comment/>
+  </data>
+  <data name="buy" xml:space="preserve">
+    <value> buy</value>
+    <comment/>
+  </data>
+  <data name="continue-shopping" xml:space="preserve">
+    <value>Continue shopping</value>
+    <comment/>
+  </data>
+  <data name="uzbek" xml:space="preserve">
+    <value>O'zbekcha</value>
+    <comment/>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>English</value>
+    <comment/>
+  </data>
+  <data name="russia" xml:space="preserve">
+    <value>русский</value>
+    <comment/>
+  </data>
 </root>
