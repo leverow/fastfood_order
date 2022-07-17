@@ -23,7 +23,7 @@ public class BotBackgroundService : BackgroundService
         _botClient.StartReceiving(
             _updateHandler.HandleUpdateAsync,
             _updateHandler.HandlePollingErrorAsync,
-            new Telegram.Bot.Polling.ReceiverOptions()
+            new ReceiverOptions()
             {
                 ThrowPendingUpdates = true
             }, stoppingToken);
