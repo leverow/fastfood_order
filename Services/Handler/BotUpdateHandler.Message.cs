@@ -1,5 +1,4 @@
 using System;
-using fastfood_order.Services.Handler;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
@@ -28,32 +27,18 @@ public partial class BotUpdateHandler
     {
         var chatId = message.Chat.Id;
 
-        var messageChatId = 0;
-
         if(message.Text == "/start")
         {
             await botClient.SendTextMessageAsync(
                 chatId,
                 text: "Tilni tanlang!",
                 cancellationToken: token
-            );
-
-            Console.WriteLine($"{message.MessageId}");
-            
+            );            
         }
 
         if(message.Text == "uzbek")
         {
-            await botClient.SendTextMessageAsync(
-                chatId,
-                text: "Ism familiyanginzni jo'nating!",
-                cancellationToken: token
-            );
-            messageChatId = message.MessageId;
-        }
-        if(messageChatId+1 == message.MessageId)
-        {
-            Console.WriteLine($"{message.MessageId}");   
+           // bu joydan hamma narsa boshlanadi
         }
     }
 

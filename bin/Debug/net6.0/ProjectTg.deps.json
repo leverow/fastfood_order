@@ -13,6 +13,11 @@
         },
         "runtime": {
           "ProjectTg.dll": {}
+        },
+        "resources": {
+          "uz/ProjectTg.resources.dll": {
+            "locale": "uz"
+          }
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
