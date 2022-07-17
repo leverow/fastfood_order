@@ -15,6 +15,12 @@
           "ProjectTg.dll": {}
         },
         "resources": {
+          "en/ProjectTg.resources.dll": {
+            "locale": "en"
+          },
+          "ru/ProjectTg.resources.dll": {
+            "locale": "ru"
+          },
           "uz/ProjectTg.resources.dll": {
             "locale": "uz"
           }

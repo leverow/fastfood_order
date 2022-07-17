@@ -61,3 +61,11 @@
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ProjectTg.csproj.GenerateResource.cache
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/uz/ProjectTg.resources.cs
 /home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/uz/ProjectTg.resources.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/bin/Debug/net6.0/en/ProjectTg.resources.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/bin/Debug/net6.0/ru/ProjectTg.resources.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ProjectTg.Resources.BotLocalizer.en.resources
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ProjectTg.Resources.BotLocalizer.ru.resources
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/en/ProjectTg.resources.cs
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/en/ProjectTg.resources.dll
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ru/ProjectTg.resources.cs
+/home/abdulaziz/Abdulaziz/Fastfood/fastfood_order/obj/Debug/net6.0/ru/ProjectTg.resources.dll
