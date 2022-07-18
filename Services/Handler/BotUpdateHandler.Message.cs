@@ -57,12 +57,6 @@ public partial class BotUpdateHandler
 
         if(!message.Contact.PhoneNumber.Contains("+998"))
         {
-            // await botClient.SendTextMessageAsync(
-            //     chatId: message.Chat.Id,
-            //     text: "Telefon raqam formati noto`g`ri kiritildi.",
-            //     replyMarkup: CreateContactRequestButton("Qaytadan telefon raqamni ulashish"),
-            //     cancellationToken: token
-            // );
 
             await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
@@ -76,22 +70,17 @@ public partial class BotUpdateHandler
             await botClient.SendTextMessageAsync(
                 chatId: message.Chat.Id,
                 text: "Raqamingiz muvafaqqiyatli saqlandi",
-                replyMarkup: new ReplyKeyboardRemove(),
+                replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainContains.LanguageNames.Values.ToArray(), 3),
                 cancellationToken: token);
-
-            await botClient.SendTextMessageAsync(
-            chatId: message.Chat.Id,
-            text: $"Asosiy",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainContains.LanguageNames.Values.ToArray(), 3),
-            parseMode: ParseMode.Html,
-            cancellationToken: token);
         }
         return Task.CompletedTask;
     }
-    private async Task HandleUnknownMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
+    private Task HandleUnknownMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
     {
         var chatId = message.Chat.Id;
 
         _logger.LogInformation($"User send {message.Type} message!");
+
+        return Task.CompletedTask;
     }
 }
