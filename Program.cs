@@ -10,6 +10,8 @@ builder.Services.AddSingleton(new TelegramBotClient(token));
 builder.Services.AddSingleton<IUpdateHandler, BotUpdateHandler>();
 builder.Services.AddHostedService<BotBackgroundService>();
 
+builder.Services.AddLocalization();
+
 var app = builder.Build();
 
 var supportedCultures = new[] { "uz-Uz", "en-Us", "ru-Ru" };
