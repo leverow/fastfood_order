@@ -8,13 +8,13 @@ namespace fastfood_order.Services;
 
 public partial class BotUpdateHandler
 {
-    private async Task Settings(ITelegramBotClient botClient, Message message, CancellationToken token)
+    private async Task Order(ITelegramBotClient botClient, Message message, CancellationToken token)
    {
 
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: $"Nimani o'zgartirmoqchisiz?",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(SettingContains.LanguageNames.Values.ToArray(), 3),
+            text: $"Foodlar royhati chiqadi",
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FoodNames.Values.ToArray(), 3),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );
