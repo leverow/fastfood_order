@@ -452,3 +452,11 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+##O`zim qo`shganlar #1
+bin/
+obj/
+
+## O`zim qo`shganlar #2
+**/bin/**
+**/ojb/**
