@@ -13,7 +13,7 @@ public partial class BotUpdateHandler
         
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: "Iltimos tilni tanlang!",
+            text: _localizer["choose-language"],
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.LanguageNames.Values.ToArray(), 3),
             parseMode: ParseMode.Html,
             cancellationToken: token
