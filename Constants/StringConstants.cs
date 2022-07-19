@@ -1,14 +1,12 @@
-using Telegram.Bot.Types.ReplyMarkups;
+namespace fastfood_order.Services;
 
-namespace bot.Constants;
-
-public static class StringConstants
+public partial class BotUpdateHandler
 {
     public static Dictionary<string, string> LanguageNames => new()
     {
-        { "uz-Uz", "O'zbekcha" },
-        { "ru-Ru", "Русский" },
-        { "en-Us", "English" },
+        { "uz-Uz", "O'zbekcha 🇺🇿" },
+        { "ru-Ru", "Pусский 🇷🇺" },
+        { "en-Us", "English 🇺🇸" },
     };
     public static Dictionary<string, string> SettingButtons => new()
     {
@@ -28,7 +26,7 @@ public static class StringConstants
     }; 
 
 
-    public static Dictionary<string, string> Drinks => new()
+    public static Dictionary<string, string> DisplayDrinks => new()
     {
         { "cola", "CocaCola" },
         { "pepsi", "Pepsi" },
@@ -55,7 +53,7 @@ public static class StringConstants
         { "continue", "Davom etish" },
     };
 
-    public static Dictionary<string, string> FoodCount => new()
+    public static Dictionary<string, string> FoodsCount => new()
     {
         { "1", "1" },
         { "2", "2" },
@@ -69,13 +67,13 @@ public static class StringConstants
         { "10", "10" },
     };
 
-    public static Dictionary<string, string> ReadyFood => new()
+    public static Dictionary<string, string> DisplayReadyFood => new()
     {
         { "davom-etish", "Haridni davom etish" },
         { "zakaz-berish", "Zakaz berish" },
     };
 
-    public static Dictionary<string, string> TakeFood => new()
+    public static Dictionary<string, string> DisplayTakeFood => new()
     {
         { "location", "Locatsiya jo'natish" },
     };

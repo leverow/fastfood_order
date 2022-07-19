@@ -1,8 +1,13 @@
+using fastfood_order.Data;
 using fastfood_order.Services;
+using Microsoft.EntityFrameworkCore;
 using Telegram.Bot;
 using Telegram.Bot.Polling;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<BotDbContext>(
+    options => options.UseSqlite(builder.Configuration.GetConnectionString("BotConnection")));
 
 var token = builder.Configuration.GetValue("BotToken", string.Empty);
 
