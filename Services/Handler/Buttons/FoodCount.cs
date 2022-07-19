@@ -1,4 +1,3 @@
-using bot.Constants;
 using bot.Helpers;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -14,7 +13,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: "Sonini kiriting",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FoodCount.Values.ToArray(), 3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(FoodsCount.Values.ToArray(), 3),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );

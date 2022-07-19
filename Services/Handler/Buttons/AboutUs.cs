@@ -1,4 +1,3 @@
-using bot.Constants;
 using bot.Helpers;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -15,7 +14,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: $"{about}",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.MainMenu.Values.ToArray(), 3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu.Values.ToArray(), 3),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );

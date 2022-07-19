@@ -68,9 +68,31 @@ public partial class BotUpdateHandler : IUpdateHandler
             UpdateType.InlineQuery => update?.InlineQuery?.From,
             _ => update?.Message?.From
         };
-        var user = await _userService.GetUserAsync(from?.Id);
 
-        return new CultureInfo(user?.LanguageCode ?? "uz-Uz");
+        var result = await _userService.AddUserAsync(new Entity.User()
+        {
+            FirstName = from.FirstName,
+            LastName = from.LastName,
+            ChatId = update.Message.Chat.Id,
+            UserId = from.Id,
+            Username = from.Username,
+            LanguageCode = from.LanguageCode,
+            CreatedAt = DateTimeOffset.UtcNow,
+            LastInteractionAt = DateTimeOffset.UtcNow
+        });
+
+        if(result.IsSuccess)
+        {
+            _logger.LogInformation($"New user successfully added: {from.Id}, Name: {from.FirstName}");
+        }
+        else
+        {
+            _logger.LogInformation($"User not added: {from.Id}, Error: {result.ErrorMessage}");
+        }
+
+        var language = await _userService.GetLanguageCodeAsync(from?.Id);
+
+        return new CultureInfo(language ?? "uz-Uz");
     }
 
     private Task HandleUnknowMessageAsync(ITelegramBotClient botClient, Update? update, CancellationToken token)

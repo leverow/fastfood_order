@@ -1,11 +1,8 @@
-using System.Security.Cryptography;
-using System;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using Telegram.Bot.Types.ReplyMarkups;
 using bot.Helpers;
-using bot.Constants;
+using Microsoft.Extensions.Localization;
 
 namespace fastfood_order.Services;
 
@@ -14,10 +11,8 @@ public partial class BotUpdateHandler
     private async Task HandleMessageAsync(ITelegramBotClient botClient, Message? message, CancellationToken token)
     {
         ArgumentNullException.ThrowIfNull(message);
-
         var from = message.From;
         _logger.LogInformation($"Name - {from?.FirstName} Username: {from?.Username} -> Message text: ({message.Text})");
-
         var handler = message.Type switch
         {
             MessageType.Text => HandlerTextMessageAsync(botClient, message, token),
@@ -44,11 +39,10 @@ public partial class BotUpdateHandler
     private async Task HandlerTextMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
     {
         var chatId = message.Chat.Id;
-        
         var handler = message.Text switch
         {
             "/start" => HandleStartMessageAsync(botClient, message, token),
-            "O'zbekcha" or "Русский" or "English" => MainButtons(botClient, message, token),
+            "O'zbekcha 🇺🇿" or "Pусский 🇷🇺" or "English 🇺🇸" => HandleLanguageAsync(botClient, message, token),
             "Biz haqimizda" => AboutUs(botClient, message, token),
             "Sozlamalar" => Settings(botClient, message, token),
             "Buyurtma berish" => Order(botClient, message, token),
@@ -70,11 +64,7 @@ public partial class BotUpdateHandler
 
     private async Task HandleStartMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
     {
-        await botClient.SendTextMessageAsync(
-            chatId: message.Chat.Id,
-            text: _localizer["choose-language"],
-            cancellationToken: token
-        );
+        await ChangeLanguage(botClient,message,token);
     }
 
     public static async Task<Task> CheckAndSaveContact(ITelegramBotClient botClient, Message message, CancellationToken token)
@@ -96,7 +86,7 @@ public partial class BotUpdateHandler
             await botClient.SendTextMessageAsync(
                 chatId: message.Chat.Id,
                 text: "Zakaz haqida ma'luomt chiqadi va asosiy menuga qaytib ketadi",
-                replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.MainMenu.Values.ToArray(), 3),
+                replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu.Values.ToArray(), 3),
                 cancellationToken: token);
         return Task.CompletedTask;
     }
@@ -106,6 +96,15 @@ public partial class BotUpdateHandler
         await GetNumber(botClient, message, token);
         
         return Task.CompletedTask;
+    }
+    private async Task HandleLanguageAsync(ITelegramBotClient client, Message message, CancellationToken token)
+    {
+        var cultureString = LanguageNames.FirstOrDefault(v => v.Value == message.Text).Key;
+        await _userService.UpdateLanguageCodeAsync(message.From.Id, cultureString);
+
+        await client.DeleteMessageAsync(message.Chat.Id, message.MessageId, token);
+
+        await MainButtons(client, message, token);
     }
     private Task HandleUnknownMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
     {

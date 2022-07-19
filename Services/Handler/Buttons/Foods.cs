@@ -1,4 +1,3 @@
-using bot.Constants;
 using bot.Helpers;
 using Telegram.Bot;
 using Telegram.Bot.Types;
@@ -14,7 +13,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: $"FastFood haqida ma'lumot chiqadi",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FoodChoosed.Values.ToArray(), 3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(FoodChoosed.Values.ToArray(), 3),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );
@@ -25,7 +24,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: $"FastFood haqida ma'lumot chiqadi",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.Drinks.Values.ToArray(), 3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(DisplayDrinks.Values.ToArray(), 3),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );
