@@ -13,10 +13,11 @@ public partial class BotUpdateHandler : IUpdateHandler
     private readonly ILogger<BotUpdateHandler> _logger;
     private readonly IServiceScopeFactory _scopeFactory;
     private IStringLocalizer _localizer;
+    private UserService _userService;
 
     public BotUpdateHandler(
         ILogger<BotUpdateHandler>  logger,
-        IServiceScopeFactory scopeFactory)
+        IServiceScopeFactory scopeFactory)  
     {
         _logger = logger;
         _scopeFactory = scopeFactory;
@@ -30,15 +31,15 @@ public partial class BotUpdateHandler : IUpdateHandler
 
     public async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
     {
-        var culture = new CultureInfo("uz-Uz");
+        using var scope = _scopeFactory.CreateScope();
 
+        _userService = scope.ServiceProvider.GetRequiredService<UserService>();
+
+        var culture = await GetCultureForUser(update);
         CultureInfo.CurrentCulture = culture;
         CultureInfo.CurrentUICulture = culture;
-        
-        using var scope = _scopeFactory.CreateScope();
+
         _localizer = scope.ServiceProvider.GetRequiredService<IStringLocalizer<BotLocalizer>>();
-
-
 
         var handler = update.Type switch
         {
@@ -56,6 +57,22 @@ public partial class BotUpdateHandler : IUpdateHandler
             await HandlePollingErrorAsync(botClient, e, cancellationToken);
         }
     }
+
+    private async Task<CultureInfo> GetCultureForUser(Update update)
+    {
+        User? from = update.Type switch
+        {
+            UpdateType.Message => update?.Message?.From,
+            UpdateType.EditedMessage => update?.EditedMessage?.From,
+            UpdateType.CallbackQuery => update?.CallbackQuery?.From,
+            UpdateType.InlineQuery => update?.InlineQuery?.From,
+            _ => update?.Message?.From
+        };
+        var user = await _userService.GetUserAsync(from?.Id);
+
+        return new CultureInfo(user?.LanguageCode ?? "uz-Uz");
+    }
+
     private Task HandleUnknowMessageAsync(ITelegramBotClient botClient, Update? update, CancellationToken token)
     {
         _logger.LogInformation($"Update Type => {update?.Type}");

@@ -47,7 +47,7 @@ public partial class BotUpdateHandler
         
         var handler = message.Text switch
         {
-            "/start" or "Til" => ChangeLanguage(botClient, message, token),
+            "/start" => HandleStartMessageAsync(botClient, message, token),
             "O'zbekcha" or "Русский" or "English" => MainButtons(botClient, message, token),
             "Biz haqimizda" => AboutUs(botClient, message, token),
             "Sozlamalar" => Settings(botClient, message, token),
@@ -67,6 +67,16 @@ public partial class BotUpdateHandler
         
         await handler;
     }
+
+    private async Task HandleStartMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
+    {
+        await botClient.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["choose-language"],
+            cancellationToken: token
+        );
+    }
+
     public static async Task<Task> CheckAndSaveContact(ITelegramBotClient botClient, Message message, CancellationToken token)
     {
 
