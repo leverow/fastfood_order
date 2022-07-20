@@ -74,7 +74,7 @@ public partial class BotUpdateHandler : IUpdateHandler
         {
             FirstName = from.FirstName,
             LastName = from.LastName,
-            ChatId = update.Message.Chat.Id,
+            // ChatId = update.Message.Chat.Id,
             UserId = from.Id,
             Username = from.Username,
             LanguageCode = from.LanguageCode,

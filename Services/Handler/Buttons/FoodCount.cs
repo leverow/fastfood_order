@@ -19,7 +19,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: "Sonini kiriting",
-            replyMarkup: MarkupHelpers.GetInlineKeyboardMatrix(FoodssCount, 3),
+            replyMarkup: MarkupHelpers.GetInlineKeyboardMatrix(FoodssCount, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );
