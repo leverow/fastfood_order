@@ -12,8 +12,8 @@ public partial class BotUpdateHandler
         
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: _localizer["choose-language"],
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(LanguageNames.Values.ToArray(), 3),
+            text: $"Assalomu Alaykum! {_localizer["choose-language"]}",
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(LanguageNames.Values.ToArray(), 2),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );

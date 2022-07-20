@@ -2,11 +2,16 @@ using bot.Helpers;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace fastfood_order.Services;
 
 public partial class BotUpdateHandler
 {
+    public string[] ContinueButton => new string[]
+    {
+        "Davom etish"
+    };
     public static string[] DisplayDrinks => new string[]
     {
         "CocaCola",
@@ -41,7 +46,8 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: $"FastFood haqida ma'lumot chiqadi",
-            replyMarkup: MarkupHelpers.GetInlineKeyboardMatrix(new()
+            replyMarkup: 
+            MarkupHelpers.GetInlineKeyboardMatrix(new()
             {
                 {"sausage",$"Sosiska {sausage}"},
                 {"cheese",$"Sir xoxland {cheese}"},
@@ -59,7 +65,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: $"Ichimlik haqida ma'lumot chiqadi",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(DisplayDrinks, 3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(DisplayDrinks, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );

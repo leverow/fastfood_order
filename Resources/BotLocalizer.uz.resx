@@ -193,4 +193,8 @@
     <value>Tilni tanlash 🇺🇿 🇺🇸 🇷🇺 </value>
     <comment/>
   </data>
+  <data name="back" xml:space="preserve">
+    <value>Ortga ⬅️</value>
+    <comment/>
+  </data>
 </root>

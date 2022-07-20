@@ -14,7 +14,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: $"{about}",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu.Values.ToArray(), 3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );

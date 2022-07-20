@@ -9,19 +9,16 @@ namespace fastfood_order.Services;
 public partial class BotUpdateHandler
 {
     public string[] FoodNames => new string[]{
-        "Classic hot dog",
-        "Americano hot dog",
-        "Double hot-dog",
-        "Meat hot-dog",
-        "Franch hot-dog",
+        "Americano hot-dog 🌭",
+        "Classic hot-dog 🌭",
+        "Double hot-dog 🌭",
+        "Meat hot-dog 🌭",
+        "Franch hot-dog 🌭" ,
         "Ichimliklar",
-        "Ortga"
+        _localizer["back"]
     }; 
     private async Task Order(ITelegramBotClient botClient, Message message, CancellationToken token)
    {
-        
-
-
         await botClient.SendTextMessageAsync(
             message.Chat.Id,
             "Choose",

@@ -7,12 +7,19 @@ namespace fastfood_order.Services;
 
 public partial class BotUpdateHandler
 {
+
+    public string[] MainMenu => new string[]
+    {
+        _localizer["to-order"],
+        _localizer["settings"],       
+        _localizer["our-information"],
+    };
     private async Task MainButtons(ITelegramBotClient botClient, Message? message, CancellationToken token)
     {
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: "Asosiy",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu.Values.ToArray(), 3),
+            text: "✅",
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );

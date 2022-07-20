@@ -193,4 +193,8 @@
     <value>Hасчет нас  👥</value>
     <comment/>
   </data>
+  <data name="back" xml:space="preserve">
+    <value>Hазад ⬅️</value>
+    <comment/>
+  </data>
 </root>

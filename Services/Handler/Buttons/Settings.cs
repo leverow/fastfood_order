@@ -9,8 +9,8 @@ public partial class BotUpdateHandler
 {
     public string[] SettingButtons => new string[]
     {
-        "Til",
-        "Ortga"
+        _localizer["choose-language"],
+        _localizer["back"],
     };
     private async Task Settings(ITelegramBotClient botClient, Message message, CancellationToken token)
    {
@@ -18,7 +18,7 @@ public partial class BotUpdateHandler
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: $"Nimani o'zgartirmoqchisiz?",
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(SettingButtons,3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(SettingButtons,2),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );
