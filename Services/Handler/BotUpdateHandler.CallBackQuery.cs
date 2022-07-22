@@ -13,18 +13,18 @@ public partial class BotUpdateHandler
         
         _logger.LogInformation("Received CallbackQuery from {from.Firstname}: {query.Data}", from?.FirstName, query.Data);
 
-        if(query?.Data == "sausage")
-        {
-            var result = await _userService.AddExtrasAsync(query.From.Id, sausage: 1);
+        // if(query?.Data == "sausage")
+        // {
+        //     var result = await _userService.AddExtrasAsync(query.From.Id, sausage: 1);
 
-            if(result.IsSuccess)
-            {
-                _logger.LogInformation($"New ExtraSausage successfully added by {query.From.Id}, Name: {query.From.FirstName}");
-            }
-            else
-            {
-                _logger.LogInformation($"Extra Sausage not added: {query.From.Id}, Error: {result.ErrorMessage}");
-            }
-        }
+        //     if(result.IsSuccess)
+        //     {
+        //         _logger.LogInformation($"New ExtraSausage successfully added by {query.From.Id}, Name: {query.From.FirstName}");
+        //     }
+        //     else
+        //     {
+        //         _logger.LogInformation($"Extra Sausage not added: {query.From.Id}, Error: {result.ErrorMessage}");
+        //     }
+        // }
     }
 }

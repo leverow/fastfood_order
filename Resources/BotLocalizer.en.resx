@@ -193,8 +193,12 @@
     <value>Our-information 👥</value>
     <comment/>
   </data>
-  <data name="back" xml:space="preserve">
-    <value>Back ⬅️</value>
+  <data name="drinks" xml:space="preserve">
+    <value>Drinks</value>
+    <comment/>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>Continue</value>
     <comment/>
   </data>
 </root>

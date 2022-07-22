@@ -186,15 +186,19 @@
     <comment/>
   </data>
   <data name="russia" xml:space="preserve">
-    <value>русский 🇷🇺</value>
+    <value>Русский 🇷🇺</value>
     <comment/>
   </data>
   <data name="choose-language" xml:space="preserve">
     <value>Tilni tanlash 🇺🇿 🇺🇸 🇷🇺 </value>
     <comment/>
   </data>
-  <data name="back" xml:space="preserve">
-    <value>Ortga ⬅️</value>
+  <data name="drinks" xml:space="preserve">
+    <value>Ichimliklar🍹</value>
+    <comment/>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>Davom etish</value>
     <comment/>
   </data>
 </root>

@@ -193,8 +193,12 @@
     <value>Hасчет нас  👥</value>
     <comment/>
   </data>
-  <data name="back" xml:space="preserve">
-    <value>Hазад ⬅️</value>
+  <data name="drinks" xml:space="preserve">
+    <value>Напитки</value>
+    <comment/>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>Продолжать</value>
     <comment/>
   </data>
 </root>

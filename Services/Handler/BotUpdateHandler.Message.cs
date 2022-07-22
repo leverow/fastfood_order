@@ -1,3 +1,4 @@
+using System.Globalization;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
@@ -40,24 +41,24 @@ public partial class BotUpdateHandler
     private async Task HandlerTextMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
     {
         var chatId = message.Chat.Id;
+        
+        if(message.Text == _localizer["to-order"]) await Order(botClient,message,token);
+        if(message.Text == _localizer["back"]) await ReplyMarkupBackKeyboard(botClient, message, token);
+        if(message.Text == _localizer["send"]) await GetNumber(botClient, message, token);
+        if(message.Text == _localizer["our-information"]) await AboutUs(botClient, message, token);
+        if(message.Text == _localizer["settings"]) await Settings(botClient, message, token);
+        if(message.Text == _localizer["continue-shopping"]) await Order(botClient, message, token);
+        if(message.Text == _localizer["drinks"]) await Drinks(botClient, message, token);
+        if(message.Text == _localizer["next"]) await FoodCount(botClient, message, token);
+        if(message.Text == _localizer["buy"]) await SendLocation(botClient, message, token);
+        if(message.Text == _localizer["choose-language"]) await ChangeLanguage(botClient,message,token);
+        
         var handler = message.Text switch
         {
             "/start" => HandleStartMessageAsync(botClient, message, token),
             "O'zbekcha 🇺🇿" or "Pусский 🇷🇺" or "English 🇺🇸" => HandleLanguageAsync(botClient, message, token),
-            "Biz haqimizda  👥" or "Hасчет нас  👥" or "Our-information 👥" => AboutUs(botClient, message, token),
-            "Sozlamalar ⚙️" or "Hастройки ⚙️" or "Settings ⚙️" => Settings(botClient, message, token),
-            "Buyurtma  berish 🌟" or "Заказать 🌟" or "To order 🌟" => Order(botClient, message, token),
-            "Ortga ⬅️" or "Hазад ⬅️" or "Back ⬅️" => ReplyMarkupBackKeyboard(botClient, message, token),
-            "Yuborish 📞" or "Отправить 📞" or "Send 📞" => GetNumber(botClient, message, token),
             "Americano hot-dog 🌭" or "Classic hot-dog 🌭" or "Double hot-dog 🌭" or "Meat hot-dog 🌭" or "Franch hot-dog 🌭" 
                 => Foods(botClient, message, token),
-            "Ichimliklar" => Drinks(botClient, message, token),
-            "Xaridni davom ettirish 💵" or "Продолжить покупку 💲" or "Continue shopping 💲" => Order(botClient, message, token),
-            "Davom etish" => FoodCount(botClient, message, token),
-            // "1" or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "10"
-            //     => ReadyFood(botClient, message, token),
-            "Sotib olish 💲" or "Покупка 💵" or "Buy 💵" => SendLocation(botClient, message, token),
-            "Tilni tanlash 🇺🇿 🇺🇸 🇷🇺" or "Выбор языка 🇺🇿 🇺🇸 🇷🇺" or "Select language 🇺🇿 🇺🇸 🇷🇺" => HandleStartMessageAsync(botClient, message, token),
             _ => Task.CompletedTask
         };
         
@@ -99,7 +100,10 @@ public partial class BotUpdateHandler
     private async Task HandleLanguageAsync(ITelegramBotClient client, Message message, CancellationToken token)
     {
         var cultureString = LanguageNames.FirstOrDefault(v => v.Value == message.Text).Key;
-        await _userService.UpdateLanguageCodeAsync(message.From.Id, cultureString);
+        await _userService.UpdateLanguageCodeAsync(message?.From?.Id, cultureString);
+
+        CultureInfo.CurrentCulture = new CultureInfo(cultureString);
+        CultureInfo.CurrentUICulture = new CultureInfo(cultureString);
 
         await client.DeleteMessageAsync(message.Chat.Id, message.MessageId, token);
 

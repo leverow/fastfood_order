@@ -18,7 +18,7 @@ public partial class BotUpdateHandler
     {
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: "✅",
+            text: "Siz tanlagan til o'zgartirildi",
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token
