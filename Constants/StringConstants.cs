@@ -8,4 +8,5 @@ public partial class BotUpdateHandler
         { "en-Us", _localizer["english"] },
         { "ru-Ru", _localizer["russia"] },
     };
+
 }

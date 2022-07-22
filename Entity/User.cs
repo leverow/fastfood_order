@@ -12,18 +12,12 @@ public class User
     public int StepOfOrder { get; set; } = 0;    
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset LastInteractionAt { get; set; }
-    //Hot dogs count
+    //Hot dogs count    
     public int ClassicHotDog { get; set; } = 0;
     public int DoubleHotDog { get; set; } = 0;
     public int AmericanoHotDog { get; set; } = 0;
     public int FranchHotDog { get; set; } = 0;
     public int MeatHotDog { get; set; } = 0;
-    //Extras
-    public int ExtraSausage { get; set; } = 0;
-    public int ExtraCheese { get; set; } = 0;
-    public int ExtraTurkey { get; set; } = 0;
-    public int ExtraBeef { get; set; } = 0;
-    public int ExtraBalonesia { get; set; } = 0;
     
     
     

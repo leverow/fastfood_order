@@ -42,14 +42,14 @@ public partial class BotUpdateHandler
     {
         var chatId = message.Chat.Id;
         
-        if(message.Text == _localizer["to-order"]) await Order(botClient,message,token);
+        if(message.Text == _localizer["to-order"]) await MenuOfHotdogs(botClient,message,token);
         if(message.Text == _localizer["back"]) await ReplyMarkupBackKeyboard(botClient, message, token);
         if(message.Text == _localizer["send"]) await GetNumber(botClient, message, token);
         if(message.Text == _localizer["our-information"]) await AboutUs(botClient, message, token);
         if(message.Text == _localizer["settings"]) await Settings(botClient, message, token);
-        if(message.Text == _localizer["continue-shopping"]) await Order(botClient, message, token);
+        if(message.Text == _localizer["continue-shopping"]) await MenuOfHotdogs(botClient, message, token);
         if(message.Text == _localizer["drinks"]) await Drinks(botClient, message, token);
-        if(message.Text == _localizer["next"]) await FoodCount(botClient, message, token);
+        // if(message.Text == _localizer["next"]) await FoodCount(botClient, message, token);
         if(message.Text == _localizer["buy"]) await SendLocation(botClient, message, token);
         if(message.Text == _localizer["choose-language"]) await ChangeLanguage(botClient,message,token);
         
@@ -57,8 +57,13 @@ public partial class BotUpdateHandler
         {
             "/start" => HandleStartMessageAsync(botClient, message, token),
             "O'zbekcha 🇺🇿" or "Pусский 🇷🇺" or "English 🇺🇸" => HandleLanguageAsync(botClient, message, token),
-            "Americano hot-dog 🌭" or "Classic hot-dog 🌭" or "Double hot-dog 🌭" or "Meat hot-dog 🌭" or "Franch hot-dog 🌭" 
-                => Foods(botClient, message, token),
+            
+            "Americano hot-dog 🌭" => Foods(botClient, message, token, 1),
+            "Double hot-dog 🌭" => Foods(botClient, message, token, 2),
+            "Franch hot-dog 🌭" => Foods(botClient, message, token, 3),
+            "Meat hot-dog 🌭" => Foods(botClient, message, token, 4),
+            "Classic hot-dog 🌭" => Foods(botClient, message, token, 5),
+
             _ => Task.CompletedTask
         };
         
@@ -105,7 +110,7 @@ public partial class BotUpdateHandler
         CultureInfo.CurrentCulture = new CultureInfo(cultureString);
         CultureInfo.CurrentUICulture = new CultureInfo(cultureString);
 
-        await client.DeleteMessageAsync(message.Chat.Id, message.MessageId, token);
+        // await client.DeleteMessageAsync(message.Chat.Id, message.MessageId, token);
 
         await MainButtons(client, message, token);
     }

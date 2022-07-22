@@ -17,11 +17,12 @@ public partial class BotUpdateHandler
         "Ichimliklar",
         _localizer["back"]
     }; 
-    private async Task Order(ITelegramBotClient botClient, Message message, CancellationToken token)
+    private async Task MenuOfHotdogs(ITelegramBotClient botClient, Message message, CancellationToken token)
    {
-        await botClient.SendTextMessageAsync(
+        await botClient.SendPhotoAsync(
             message.Chat.Id,
-            "Choose",
+            photo: "https://i.imgur.com/flIcOby.jpg",
+            caption: "Menu of Hot dogs",
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(FoodNames));
    } 
 }

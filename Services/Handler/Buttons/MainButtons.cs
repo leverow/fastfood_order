@@ -18,7 +18,7 @@ public partial class BotUpdateHandler
     {
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: "Siz tanlagan til o'zgartirildi",
+            text: _localizer["language-changed"],
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token

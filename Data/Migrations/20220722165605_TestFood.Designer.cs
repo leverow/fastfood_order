@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using fastfood_order.Data;
 
@@ -10,9 +11,10 @@ using fastfood_order.Data;
 namespace ProjectTg.Data.Migrations
 {
     [DbContext(typeof(BotDbContext))]
-    partial class BotDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220722165605_TestFood")]
+    partial class TestFood
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.7");
@@ -23,26 +25,14 @@ namespace ProjectTg.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("AmericanoHotDog")
-                        .HasColumnType("INTEGER");
-
                     b.Property<long>("ChatId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ClassicHotDog")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("DoubleHotDog")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("FirstName")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("FranchHotDog")
-                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsBot")
                         .HasColumnType("INTEGER");
@@ -56,8 +46,8 @@ namespace ProjectTg.Data.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("MeatHotDog")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Orders")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("StepOfOrder")
                         .HasColumnType("INTEGER");
