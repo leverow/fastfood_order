@@ -24,7 +24,7 @@ public partial class BotUpdateHandler
 
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: "Miqdorini kiriting",
+            text: _localizer["food-count"],
             replyMarkup: MarkupHelpers.GetInlineKeyboardMatrix(new()
             {
                 { $"ayirish_{selectedHotdogNumber}", "➖" },

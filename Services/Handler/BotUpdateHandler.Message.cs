@@ -1,10 +1,8 @@
 using System.Globalization;
+using bot.Helpers;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
-using bot.Helpers;
-using Microsoft.Extensions.Localization;
-using Telegram.Bot.Types.ReplyMarkups;
 
 namespace fastfood_order.Services;
 
@@ -34,7 +32,27 @@ public partial class BotUpdateHandler
 
     private async Task<Task> HandlerLocationMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
     {
-        await CheckAndSaveLocation(botClient,message,token);
+        // await botClient.SendTextMessageAsync(
+        //     chatId: message.Chat.Id,
+        //     text: _localizer["true-location"],
+        //     replyToMessageId: message.MessageId,
+        //     replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(IsTrueLocation, 2),
+        //     cancellationToken: token);
+
+
+        await botClient.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["true-location"],
+            replyToMessageId: message.MessageId,
+            replyMarkup: MarkupHelpers.GetInlineKeyboardMatrix(new()
+            {
+                { $"accept", $"{_localizer["true"]}" },
+                { $"discard", $"{_localizer["false"]}" },
+            }, 2),
+            parseMode: ParseMode.Html,
+            cancellationToken: token
+        );
+
         return Task.CompletedTask;
     }
         
@@ -48,10 +66,13 @@ public partial class BotUpdateHandler
         if(message.Text == _localizer["our-information"]) await AboutUs(botClient, message, token);
         if(message.Text == _localizer["settings"]) await Settings(botClient, message, token);
         if(message.Text == _localizer["continue-shopping"]) await MenuOfHotdogs(botClient, message, token);
-        if(message.Text == _localizer["drinks"]) await Drinks(botClient, message, token);
         // if(message.Text == _localizer["next"]) await FoodCount(botClient, message, token);
         if(message.Text == _localizer["buy"]) await SendLocation(botClient, message, token);
         if(message.Text == _localizer["choose-language"]) await ChangeLanguage(botClient,message,token);
+        if(message.Text == _localizer["drinks"]) await Drinks(botClient,message,token);
+        if(message.Text == _localizer["next"]) await SendLocation(botClient,message,token);
+        if(message.Text == _localizer["go-shop"]) await MenuOfHotdogs(botClient,message,token);
+        if(message.Text == _localizer["ended"]) await EndShopping(botClient,message,token);
         
         var handler = message.Text switch
         {
@@ -63,7 +84,6 @@ public partial class BotUpdateHandler
             "Franch hot-dog 🌭" => Foods(botClient, message, token, 3),
             "Meat hot-dog 🌭" => Foods(botClient, message, token, 4),
             "Classic hot-dog 🌭" => Foods(botClient, message, token, 5),
-
             _ => Task.CompletedTask
         };
         
@@ -72,6 +92,13 @@ public partial class BotUpdateHandler
 
     private async Task HandleStartMessageAsync(ITelegramBotClient botClient, Message message, CancellationToken token)
     {
+        var welcome = "Здравствуйте! Давайте для начала выберем язык обслуживания! \n\n Keling, avvaliga xizmat ko’rsatish tilini tanlab olaylik! \n\n Hi! Let's first we choose language of serving!";
+
+        await botClient.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: $"{welcome}",
+            cancellationToken: token);
+
         await ChangeLanguage(botClient,message,token);
     }
 
@@ -91,7 +118,10 @@ public partial class BotUpdateHandler
         // }
         // else
         // {}
-        await MainButtons(botClient, message, token);
+        await ReadyFood(botClient, message, token);
+        
+
+        // await MainButtons(botClient, message, token);
 
         return Task.CompletedTask;
     }

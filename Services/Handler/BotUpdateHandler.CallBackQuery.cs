@@ -82,5 +82,17 @@ public partial class BotUpdateHandler
                 cancellationToken: cancellationToken
             );
         }
+
+
+
+         if(query.Data == "accept")
+         {
+            await CheckAndSaveLocation(botClient, query.Message, cancellationToken);
+         } 
+         else if(query.Data == "discard")
+         {
+            await SendLocation(botClient, query.Message, cancellationToken);
+         }
+
     }
 }

@@ -190,15 +190,115 @@
     <comment/>
   </data>
   <data name="choose-language" xml:space="preserve">
-    <value>Tilni tanlash 🇺🇿 🇺🇸 🇷🇺 </value>
+    <value>Tilni tanlash 🇺🇿</value>
     <comment/>
   </data>
   <data name="drinks" xml:space="preserve">
-    <value>Ichimliklar🍹</value>
+    <value>Ichimliklar 🍹</value>
     <comment/>
   </data>
   <data name="next" xml:space="preserve">
-    <value>Davom etish</value>
+    <value>Davom etish ⏩</value>
+    <comment/>
+  </data>
+  <data name="language-changed" xml:space="preserve">
+    <value>Til muvofaqqiyatli o'zgartirildi ✅</value>
+    <comment/>
+  </data>
+  <data name="choose-thing" xml:space="preserve">
+    <value>Sizning savatingiz bo'sh , buyurtma berish uchun mahsulot tanlang 📦</value>
+    <comment/>
+  </data>
+  <data name="motto" xml:space="preserve">
+    <value>Burdog fastfood botiga xush kelibsiz! Endi esa sizga sodda va ko’p vaqt olmaydigan ro’yhatdan o’tish jarayonini taklif etamiz.</value>
+    <comment/>
+  </data>
+  <data name="back" xml:space="preserve">
+    <value>◀️ Ortga</value>
+    <comment/>
+  </data>
+  <data name="phone-requirement" xml:space="preserve">
+    <value>📱 Telefon raqamingiz qanday? Telefon raqamingizni jo'natish uchun, quyidagi "📱 Raqamimni jo'natish" tugmasini bosing yoki 📱 Raqamni +998  ***  ** shaklida yuboring</value>
+    <comment/>
+  </data>
+  <data name="choose-setting" xml:space="preserve">
+    <value>Nimani o'zgartirmoqchisiz?</value>
+    <comment/>
+  </data>
+  <data name="bot-about" xml:space="preserve">
+    <value>Botimiz Marva fastfood tayyorlaydigan muassassaga tegishli,  U orqali qorningizni to'ydiring  A'loqa: +998-xx-xxx-xx-xx Admin: @ooo</value>
+    <comment/>
+  </data>
+  <data name="main-menu" xml:space="preserve">
+    <value>Asosiy bo'lim 📜</value>
+    <comment/>
+  </data>
+  <data name="choose-food" xml:space="preserve">
+    <value>Fastfoodlardan birini tanlang 🌭</value>
+    <comment/>
+  </data>
+  <data name="choose-drink" xml:space="preserve">
+    <value>Ichimliklarning birini tanlang 🍼</value>
+    <comment/>
+  </data>
+  <data name="food-count" xml:space="preserve">
+    <value>Hot-dogdan nechta olasiz ❓</value>
+    <comment/>
+  </data>
+  <data name="juice" xml:space="preserve">
+    <value>Sharbat 🧃</value>
+    <comment/>
+  </data>
+  <data name="send-locations" xml:space="preserve">
+    <value>Bizga joylashuvingizni jo'nating 👇</value>
+    <comment/>
+  </data>
+  <data name="sending-locations" xml:space="preserve">
+    <value>📍 Jo'natish</value>
+    <comment/>
+  </data>
+  <data name="menu-hotdog" xml:space="preserve">
+    <value>Hot-doglar menyusi 📜</value>
+    <comment/>
+  </data>
+  <data name="true" xml:space="preserve">
+    <value>Ha ✔️</value>
+    <comment/>
+  </data>
+  <data name="false" xml:space="preserve">
+    <value>Yo'q ✖️</value>
+    <comment/>
+  </data>
+  <data name="shopping" xml:space="preserve">
+    <value>Xaridingiz tugagan bo'lsa «Davom etish ⏩» ni, yoki yana biron narsa qo'shmoqchi bo'sangiz «Xaridni davom ettirish 💵» ni bosing! </value>
+    <comment/>
+  </data>
+  <data name="true-location" xml:space="preserve">
+    <value>Siz yuborgan joylashuv to'g'riligiga aminmisiz?</value>
+    <comment/>
+  </data>
+  <data name="orders" xml:space="preserve">
+    <value>🧾 Buyurtma tarkibi: </value>
+    <comment/>
+  </data>
+  <data name="totalPrice" xml:space="preserve">
+    <value>💸 Jami:</value>
+    <comment/>
+  </data>
+  <data name="uzs" xml:space="preserve">
+    <value>so'm</value>
+    <comment/>
+  </data>
+  <data name="endBuy" xml:space="preserve">
+    <value>Buyurtmangizni yakunlaysizmi?</value>
+    <comment/>
+  </data>
+  <data name="ended" xml:space="preserve">
+    <value>Yakunlash</value>
+    <comment/>
+  </data>
+  <data name="go-shop" xml:space="preserve">
+    <value>Xarid yana qilish</value>
     <comment/>
   </data>
 </root>

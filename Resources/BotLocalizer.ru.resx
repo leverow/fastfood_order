@@ -186,19 +186,119 @@
     <comment/>
   </data>
   <data name="choose-language" xml:space="preserve">
-    <value>Выбор языка 🇺🇿 🇺🇸 🇷🇺 </value>
+    <value>Выбор языка 🇷🇺 </value>
     <comment/>
   </data>
   <data name="our-information" xml:space="preserve">
-    <value>Hасчет нас  👥</value>
+    <value>О нас  👥</value>
     <comment/>
   </data>
   <data name="drinks" xml:space="preserve">
-    <value>Напитки</value>
+    <value>Напитки 🍹</value>
     <comment/>
   </data>
   <data name="next" xml:space="preserve">
-    <value>Продолжать</value>
+    <value>Продолжать ⏩</value>
+    <comment/>
+  </data>
+  <data name="language-changed" xml:space="preserve">
+    <value>Язык успешно изменен ✅</value>
+    <comment/>
+  </data>
+  <data name="choose-thing" xml:space="preserve">
+    <value>Ваша корзина пуста, выберите товар для заказа 📦</value>
+    <comment/>
+  </data>
+  <data name="motto" xml:space="preserve">
+    <value>Добро пожаловать в магазин быстрого питания Burdog! Теперь мы предлагаем вам простой и трудоемкий процесс регистрации.</value>
+    <comment/>
+  </data>
+  <data name="back" xml:space="preserve">
+    <value>◀️ Назад</value>
+    <comment/>
+  </data>
+  <data name="phone-requirement" xml:space="preserve">
+    <value>📱 Какой у вас номер телефона? Чтобы отправить свой номер телефона, нажмите кнопку «Отправить мой номер» ниже или 📱 Отправьте номер как +998 *** **</value>
+    <comment/>
+  </data>
+  <data name="choose-setting" xml:space="preserve">
+    <value>Что бы вы хотели изменить?</value>
+    <comment/>
+  </data>
+  <data name="bot-about" xml:space="preserve">
+    <value>Наш бот Marva относится к заведению, которое готовит фаст-фуд,  Кормите свой живот через это  Контакт: +998-хх-ххх-хх-хх Админ: @ооо</value>
+    <comment/>
+  </data>
+  <data name="main-menu" xml:space="preserve">
+    <value>Основной раздел 📜</value>
+    <comment/>
+  </data>
+  <data name="choose-food" xml:space="preserve">
+    <value>Выберите один из фаст-фудов 🌭</value>
+    <comment/>
+  </data>
+  <data name="choose-drink" xml:space="preserve">
+    <value>Выберите один из напитков 🍼</value>
+    <comment/>
+  </data>
+  <data name="food-count" xml:space="preserve">
+    <value>Сколько вы получаете от хот-дога❓</value>
+    <comment/>
+  </data>
+  <data name="Juice" xml:space="preserve">
+    <value>Сок 🧃</value>
+    <comment/>
+  </data>
+  <data name="send-locations" xml:space="preserve">
+    <value>Отправьте нам свое местоположение 👇</value>
+    <comment/>
+  </data>
+  <data name="sending-locations" xml:space="preserve">
+    <value>📍 Отправить</value>
+    <comment/>
+  </data>
+  <data name="menu-hotdog" xml:space="preserve">
+    <value>Меню хот-догов 📜</value>
+    <comment/>
+  </data>
+  <data name="true" xml:space="preserve">
+    <value>Да ✔️</value>
+    <comment/>
+  </data>
+  <data name="false" xml:space="preserve">
+    <value>Нет ✖️</value>
+    <comment/>
+  </data>
+  <data name="shopping" xml:space="preserve">
+    <value>Нажмите «Продолжить ⏩», если ваша покупка завершена, или «Продолжить покупки 💵», если вы хотите добавить что-то еще!</value>
+    <comment/>
+  </data>
+  <data name="true-location" xml:space="preserve">
+    <value>Вы уверены, что указали правильное местоположение?</value>
+    <comment/>
+  </data>
+  <data name="orders" xml:space="preserve">
+    <value>🧾 Состав заказа:</value>
+    <comment/>
+  </data>
+  <data name="totalPrice" xml:space="preserve">
+    <value>💸 Итого: {</value>
+    <comment/>
+  </data>
+  <data name="uzs" xml:space="preserve">
+    <value>сум</value>
+    <comment/>
+  </data>
+  <data name="endBuy" xml:space="preserve">
+    <value>Завершить заказ?</value>
+    <comment/>
+  </data>
+  <data name="ended" xml:space="preserve">
+    <value>Заканчивать</value>
+    <comment/>
+  </data>
+  <data name="go-shop" xml:space="preserve">
+    <value>Покупка</value>
     <comment/>
   </data>
 </root>

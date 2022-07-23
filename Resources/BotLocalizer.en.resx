@@ -186,7 +186,7 @@
     <comment/>
   </data>
   <data name="choose-language" xml:space="preserve">
-    <value>Select language 🇺🇿 🇺🇸 🇷🇺 </value>
+    <value>Select language 🇺🇸</value>
     <comment/>
   </data>
   <data name="our-information" xml:space="preserve">
@@ -194,11 +194,111 @@
     <comment/>
   </data>
   <data name="drinks" xml:space="preserve">
-    <value>Drinks</value>
+    <value>Drinks 🍹</value>
     <comment/>
   </data>
   <data name="next" xml:space="preserve">
-    <value>Continue</value>
+    <value>Continue ⏩</value>
+    <comment/>
+  </data>
+  <data name="language-changed" xml:space="preserve">
+    <value>Language changed successfully ✅</value>
+    <comment/>
+  </data>
+  <data name="choose-thing" xml:space="preserve">
+    <value>Your cart is empty, select a product to order 📦</value>
+    <comment/>
+  </data>
+  <data name="motto" xml:space="preserve">
+    <value>Welcome to Burdog fastfood shop! Now we offer you a simple and time-consuming registration process.</value>
+    <comment/>
+  </data>
+  <data name="back" xml:space="preserve">
+    <value>◀️ Back</value>
+    <comment/>
+  </data>
+  <data name="phone-requirement" xml:space="preserve">
+    <value>📱 What is your phone number? To send your phone number, click the "Send my number" button below or 📱 Send the number as +998 *** **</value>
+    <comment/>
+  </data>
+  <data name="choose-setting" xml:space="preserve">
+    <value>What would you like to change?</value>
+    <comment/>
+  </data>
+  <data name="bot-about" xml:space="preserve">
+    <value>Our bot Marva belongs to an institution that prepares fast food,  Feed your belly through it  Contact: +998-xx-xxx-xx-xx Admin: @ooo</value>
+    <comment/>
+  </data>
+  <data name="main-menu" xml:space="preserve">
+    <value>Main section 📜</value>
+    <comment/>
+  </data>
+  <data name="choose-food" xml:space="preserve">
+    <value>Choose one of the fast foods 🌭</value>
+    <comment/>
+  </data>
+  <data name="choose-drink" xml:space="preserve">
+    <value>Choose one of the drinks 🍼</value>
+    <comment/>
+  </data>
+  <data name="food-count" xml:space="preserve">
+    <value>How much do you get from a hot dog❓</value>
+    <comment/>
+  </data>
+  <data name="juice" xml:space="preserve">
+    <value>Juice 🧃</value>
+    <comment/>
+  </data>
+  <data name="send-locations" xml:space="preserve">
+    <value>Send us your location 👇</value>
+    <comment/>
+  </data>
+  <data name="sending-locations" xml:space="preserve">
+    <value>📍 Send</value>
+    <comment/>
+  </data>
+  <data name="menu-hotdog" xml:space="preserve">
+    <value>Menu of Hot dogs 📜</value>
+    <comment/>
+  </data>
+  <data name="true" xml:space="preserve">
+    <value>Yes ✔️</value>
+    <comment/>
+  </data>
+  <data name="false" xml:space="preserve">
+    <value>No ✖️</value>
+    <comment/>
+  </data>
+  <data name="shopping" xml:space="preserve">
+    <value>Click «Continue ⏩» if your purchase is finished, or «Continue Shopping 💵» if you want to add something else!</value>
+    <comment/>
+  </data>
+  <data name="true-location" xml:space="preserve">
+    <value>Are you sure the location you submitted is correct?</value>
+    <comment/>
+  </data>
+  <data name="orders" xml:space="preserve">
+    <value>🧾 Order list:</value>
+    <comment/>
+  </data>
+  <data name="totalPrice" xml:space="preserve">
+    <value>💸 Total :</value>
+    <comment/>
+  </data>
+  <data name="uzs" xml:space="preserve">
+    <value>UZS</value>
+    <comment/>
+  </data>
+  <data name="endBuy" xml:space="preserve">
+    <value>Complete your order?</value>
+    <comment/>
+  </data>
+  <data name="ended" xml:space="preserve">
+    <value>Finish</value>
+    <comment/>
+  </data>
+  <data name="go-shop" xml:space="preserve">
+    <value>Shopping</value>
     <comment/>
   </data>
 </root>

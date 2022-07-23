@@ -14,7 +14,7 @@ public partial class BotUpdateHandler
         "Double hot-dog 🌭",
         "Meat hot-dog 🌭",
         "Franch hot-dog 🌭" ,
-        "Ichimliklar",
+        // _localizer["drinks"],
         _localizer["back"]
     }; 
     private async Task MenuOfHotdogs(ITelegramBotClient botClient, Message message, CancellationToken token)
@@ -22,7 +22,7 @@ public partial class BotUpdateHandler
         await botClient.SendPhotoAsync(
             message.Chat.Id,
             photo: "https://i.imgur.com/flIcOby.jpg",
-            caption: "Menu of Hot dogs",
+            caption: _localizer["menu-hotdog"],
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(FoodNames));
    } 
 }

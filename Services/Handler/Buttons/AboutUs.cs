@@ -6,16 +6,16 @@ using Telegram.Bot.Types.Enums;
 namespace fastfood_order.Services;
 
 public partial class BotUpdateHandler
-{
+{ 
     private async Task AboutUs(ITelegramBotClient botClient, Message message, CancellationToken token)
    {
-        var about = "Botimiz palonchi fastfood tayyorlaydigan muassassaga tegishli, \n\n U orqali qorningizni to'ydiring \n\n A'loqa: +998-88-888-88-88 \n Admin: @AbdulazizDeveloper";
-
+        var about = $"{_localizer["bot-about"]}";
+ 
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: $"{about}",
+            text: $"{_localizer["bot-about"]}",
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu, 2),
-            parseMode: ParseMode.Html,
+            // parseMode: ParseMode.Markdown,
             cancellationToken: token
         );
    } 

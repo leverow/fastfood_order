@@ -10,15 +10,16 @@ public partial class BotUpdateHandler
 {
     public string[] ContinueButton => new string[]
     {
-        "Davom etish"
+        _localizer["next"],
+        _localizer["continue-shopping"]
     };
-    public static string[] DisplayDrinks => new string[]
+    public string[] DisplayDrinks => new string[]
     {
         "CocaCola",
         "Pepsi",
-        "Sharbat",
-        "Haridni davom etish",
-        "Ortga"
+        _localizer["juice"],
+        _localizer["back"],
+        _localizer["continue-shopping"]
     };
     private async Task Foods(ITelegramBotClient botClient, Message message, CancellationToken token, int selectedHotdogNumber)
    {
@@ -34,18 +35,31 @@ public partial class BotUpdateHandler
                 cancellationToken: token
             );
         }
-
         await _userService.UpdateStepOfOrder(message.Chat.Id, countOfStep+1);
 
         await FoodCount(botClient, message, token, selectedHotdogNumber);
+
+        await OnOrderedFood(botClient, message, token);
    } 
    private async Task Drinks(ITelegramBotClient botClient, Message message, CancellationToken token)
    {
 
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: $"Ichimlik haqida ma'lumot chiqadi",
+            text: $"{_localizer["choose-drink"]}",
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(DisplayDrinks, 2),
+            parseMode: ParseMode.Html,
+            cancellationToken: token
+        );
+   } 
+
+   private async Task OnOrderedFood(ITelegramBotClient botClient, Message message, CancellationToken token)
+   {
+
+        await botClient.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["shopping"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(ContinueButton, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token
         );

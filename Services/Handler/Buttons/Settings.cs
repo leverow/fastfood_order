@@ -17,7 +17,7 @@ public partial class BotUpdateHandler
 
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: $"Nimani o'zgartirmoqchisiz?",
+            text: _localizer["choose-setting"],
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(SettingButtons,2),
             parseMode: ParseMode.Html,
             cancellationToken: token

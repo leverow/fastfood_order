@@ -18,7 +18,7 @@ public partial class BotUpdateHandler
     {
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: _localizer["language-changed"],
+            text: _localizer["main-menu"],
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(MainMenu, 2),
             parseMode: ParseMode.Html,
             cancellationToken: token

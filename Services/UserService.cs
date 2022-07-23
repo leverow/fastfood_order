@@ -142,11 +142,11 @@ public class UserService
         return user?.LanguageCode;
     }
 
-    public async Task<int> GetAmericanoHotdogAsync(long? userId)
+    public async Task<int?> GetAmericanoHotdogAsync(long? userId)
     {
         var user = await GetUserAsync(userId);
 
-        return user.AmericanoHotDog;
+        return user?.AmericanoHotDog;
     }
     public async Task<int?> GetDoubleHotdogAsync(long? userId)
     {
